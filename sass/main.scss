@@ -196,8 +196,18 @@ body {
     img {
       width: 100%;
     }
-    &.flext-item-center {
+    &.flex-item-center {
       align-self: center;
+    }
+    &.flex-item-mobile-top {
+      @include bp-medium {
+        order: 0;
+      }
+    }
+    &.flex-item-mobile-base {
+      @include bp-medium {
+        order: 1;
+      }
     }
     @include bp-medium {
       flex: 1 1 100%;
@@ -206,6 +216,7 @@ body {
 }
 
 .flex-grid-col {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -278,7 +289,7 @@ body {
         // height: 260px;
       }
       @include breakpoint(799px) {
-        height: 80px;
+        // height: 80px;
         line-height: 1.2;
       }
     }
@@ -474,7 +485,7 @@ body {
           font-weight: 600;
           @include font-size(14px);
           color: $black !important;
-          text-decoration: underline !important;
+          //text-decoration: underline !important;
         }
 
   }
